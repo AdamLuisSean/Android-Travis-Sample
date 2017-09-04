@@ -1,5 +1,5 @@
 language: android
-sudo: required
+sudo: false
 dist: precise
 jdk: oraclejdk8
 
@@ -110,7 +110,7 @@ before_script:
   - cat /proc/cpuinfo
   - echo $ANDROID_TARGET
   - echo $ANDROID_ABI
-  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+  - echo no | android create avd --force -n test -t android-21 --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - adb wait-for-device
   - cat `which android-wait-for-emulator`
@@ -119,4 +119,4 @@ before_script:
 
 
 script:
-- "./gradlew cAT"
+- "./gradlew clean build cAT"
