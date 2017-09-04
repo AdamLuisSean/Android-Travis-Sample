@@ -1,5 +1,5 @@
 language: android
-sudo: false
+sudo: required
 dist: precise
 jdk: oraclejdk8
 
@@ -34,6 +34,9 @@ env:
     - ANDROID_TARGET=android-22  ANDROID_ABI=armeabi-v7a
     # no android-23 yet 20150925
     - ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-24  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-25  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-26  ANDROID_ABI=armeabi-v7a
 
 android:
   components:
