@@ -27,7 +27,7 @@ env:
     - DIR=constraint-layout-start # Project directory
     - API=25 # Android API level 25 by default
     - TAG=google_apis # Google APIs by default, alternatively use default
-    - ABI=armeabi-v7a # ARM ABI v7a by default
+    - ABI=x86
     - QEMU_AUDIO_DRV=none # Disable emulator audio to avoid warning
     - GRADLE_USER_HOME="${TRAVIS_BUILD_DIR}/gradle" # Change location for Gradle Wrapper and cache
     - ANDROID_HOME=/usr/local/android-sdk-24.0.2 # Depends on the cookbooks version used in the VM
@@ -58,6 +58,15 @@ install:
   - sdkmanager --uninstall "system-images;android-18;default;armeabi-v7a"
   - sdkmanager --uninstall "system-images;android-19;default;armeabi-v7a"
   - sdkmanager --uninstall "system-images;android-21;default;armeabi-v7a"
+  
+  
+  - sdkmanager --uninstall "system-images;android-15;default;x86"
+  - sdkmanager --uninstall "system-images;android-16;default;x86"
+  - sdkmanager --uninstall "system-images;android-17;default;x86"
+  - sdkmanager --uninstall "system-images;android-18;default;x86"
+  - sdkmanager --uninstall "system-images;android-19;default;x86"
+  - sdkmanager --uninstall "system-images;android-21;default;x86"
+ 
   - sdkmanager --uninstall "extras;google;google_play_services"
   - sdkmanager --uninstall "extras;android;support"
   - sdkmanager --uninstall "platforms;android-10"
