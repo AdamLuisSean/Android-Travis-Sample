@@ -115,6 +115,7 @@ before_script:
   - echo $ANDROID_TARGET
   - echo $ANDROID_ABI
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+  - emulator -avd test -wipe-data
   - emulator -avd test -no-skin -no-window &
   - adb wait-for-device
   - cat `which android-wait-for-emulator`
