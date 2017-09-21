@@ -78,7 +78,6 @@ cache:
 matrix:
   include:
     - env: ANDROID_TARGET=android-26  ANDROID_ABI=armeabi-v7a
-  allow_failures:
     - env: ANDROID_TARGET=android-14  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-15  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-16  ANDROID_ABI=armeabi-v7a
@@ -89,6 +88,7 @@ matrix:
     - env: ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-22  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+  allow_failures:
     - env: ANDROID_TARGET=android-24  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-25  ANDROID_ABI=armeabi-v7a
     - env: ANDROID_TARGET=android-26  ANDROID_ABI=armeabi-v7a
